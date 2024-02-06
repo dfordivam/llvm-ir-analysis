@@ -31,7 +31,7 @@ impl<'m> CallGraph<'m> {
             match call.callee() {
                 Either::Right(Operand::ConstantOperand(cref)) => {
                     match cref.as_ref() {
-                        Constant::GlobalReference { name, .. } => {
+                        Constant::GlobalReference { name: llvm_ir::Name::Name(name), .. } => {
                             graph.add_edge(caller, name, ());
                         }
                         _ => {
