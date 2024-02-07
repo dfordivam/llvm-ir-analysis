@@ -160,7 +160,7 @@ impl<'a> CallOrInvoke<'a> {
                 ty
             ),
         }
-        #[cfg(feature = "llvm-15-or-greater")]
+        #[cfg(not(feature = "llvm-14-or-lower"))]
         match self {
             Self::Call { call, .. } => call.function_ty.clone(),
             Self::Invoke { invoke, .. } => invoke.function_ty.clone(),
