@@ -33,6 +33,8 @@ llvm-12 = ["llvm-ir/llvm-12", "llvm-12-or-lower", "llvm-12-or-greater"]
 llvm-13 = ["llvm-ir/llvm-13", "llvm-13-or-lower", "llvm-13-or-greater"]
 llvm-14 = ["llvm-ir/llvm-14", "llvm-14-or-lower", "llvm-14-or-greater"]
 llvm-15 = ["llvm-ir/llvm-15", "llvm-15-or-lower", "llvm-15-or-greater"]
+llvm-16 = ["llvm-ir/llvm-16", "llvm-16-or-lower", "llvm-16-or-greater"]
+llvm-17 = ["llvm-ir/llvm-17", "llvm-17-or-lower", "llvm-17-or-greater"]
 
 # These features select the corresponding LLVM version, and require an exact
 # match between the system LLVM version and the LLVM version chosen here. For
@@ -58,6 +60,8 @@ llvm-12-or-greater = ["llvm-11-or-greater"]
 llvm-13-or-greater = ["llvm-12-or-greater"]
 llvm-14-or-greater = ["llvm-13-or-greater"]
 llvm-15-or-greater = ["llvm-14-or-greater"]
+llvm-16-or-greater = ["llvm-15-or-greater"]
+llvm-17-or-greater = ["llvm-16-or-greater"]
 
 llvm-8-or-lower = ["llvm-9-or-lower"]
 llvm-9-or-lower = ["llvm-10-or-lower"]
@@ -66,7 +70,9 @@ llvm-11-or-lower = ["llvm-12-or-lower"]
 llvm-12-or-lower = ["llvm-13-or-lower"]
 llvm-13-or-lower = ["llvm-14-or-lower"]
 llvm-14-or-lower = ["llvm-15-or-lower"]
-llvm-15-or-lower = []
+llvm-15-or-lower = ["llvm-16-or-lower"]
+llvm-16-or-lower = ["llvm-17-or-lower"]
+llvm-17-or-lower = []
 ###
 
 [package.metadata.docs.rs]
