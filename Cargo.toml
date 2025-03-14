@@ -1,6 +1,6 @@
 [package]
 name = "llvm-ir-analysis"
-version = "0.4.0"
+version = "0.4.1"
 authors = ["Craig Disselkoen <craigdissel@gmail.com>"]
 edition = "2021"
 description = "Static analysis on LLVM IR"
@@ -34,6 +34,7 @@ llvm-14 = ["llvm-ir/llvm-14", "llvm-14-or-lower", "llvm-14-or-greater"]
 llvm-15 = ["llvm-ir/llvm-15", "llvm-15-or-lower", "llvm-15-or-greater"]
 llvm-16 = ["llvm-ir/llvm-16", "llvm-16-or-lower", "llvm-16-or-greater"]
 llvm-17 = ["llvm-ir/llvm-17", "llvm-17-or-lower", "llvm-17-or-greater"]
+llvm-18 = ["llvm-ir/llvm-18", "llvm-18-or-lower", "llvm-18-or-greater"]
 
 # The `strict-versioning` feature requires an exact match between the system
 # LLVM version and the version selected with the above features.
@@ -54,6 +55,7 @@ llvm-14-or-greater = ["llvm-13-or-greater"]
 llvm-15-or-greater = ["llvm-14-or-greater"]
 llvm-16-or-greater = ["llvm-15-or-greater"]
 llvm-17-or-greater = ["llvm-16-or-greater"]
+llvm-18-or-greater = ["llvm-17-or-greater"]
 
 llvm-9-or-lower = ["llvm-10-or-lower"]
 llvm-10-or-lower = ["llvm-11-or-lower"]
@@ -63,7 +65,8 @@ llvm-13-or-lower = ["llvm-14-or-lower"]
 llvm-14-or-lower = ["llvm-15-or-lower"]
 llvm-15-or-lower = ["llvm-16-or-lower"]
 llvm-16-or-lower = ["llvm-17-or-lower"]
-llvm-17-or-lower = []
+llvm-17-or-lower = ["llvm-18-or-lower"]
+llvm-18-or-lower = []
 ###
 
 [package.metadata.docs.rs]
